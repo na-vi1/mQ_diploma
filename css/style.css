@@ -1,13 +1,13 @@
 @font-face {
 	font-family: "OpenSans";
-	src: local("OpenSans"), url("fonts\OpenSans-Regular.woff"); 
+	src: local("OpenSans"), url("https://github.com/na-vi1/mq_diploma/blob/main/fonts/OpenSans-Regular.woff"); 
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "OpenSans";
-	src: local("OpenSans"), url("fonts\OpenSans-Bold.woff"); 
+	src: local("OpenSans"), url("https://github.com/na-vi1/mq_diploma/blob/main/fonts/OpenSans-Bold.woff"); 
 	font-style: normal;
 	font-weight: bold;
 }
@@ -131,7 +131,7 @@ body {
   background-color: #f4f7f6;
   border: none;
   border-radius: 0;
-  background-image: url("svg/form-arrows.svg");
+  background-image: url("https://github.com/na-vi1/mq_diploma/blob/main/svg/form-arrows.svg");
   background-repeat: no-repeat;
   background-position: right 14px center;
   background-size: 10px;
@@ -159,7 +159,7 @@ body {
   height: 18px;
   margin-right: 5px;
   vertical-align: middle;
-  background-image: url("svg/form-empty-circle.svg");
+  background-image: url("https://github.com/na-vi1/mq_diploma/blob/main/svg/form-empty-circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 18px;
@@ -170,7 +170,7 @@ body {
 }
 
 .fitback__radio:checked + .fitback__radio-text::before {
-  background-image: url("svg/form-circle.svg");
+  background-image: url("https://github.com/na-vi1/mq_diploma/blob/main/svg/form-circle.svg");
 }
 
 .fitback__label-text {
@@ -245,7 +245,7 @@ body {
   width: 18px;
   height: 18px;
   padding: 0;
-  background-image: url("svg/form-x.svg");
+  background-image: url("https://github.com/na-vi1/mq_diploma/blob/main/svg/form-x.svg");
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
