@@ -3,11 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mQ_Diploma</title>
+  <title>mq_diploma</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>hello</h1>
-  <h2>yes</h2>
+<div class="popup">
+  <div class="popup__container">
+    <div class="fitback">
+      <header class="fitback__header">
+        <h3 class="fitback__title">ваш фидбек</h3> 
+      </header>
+      <div class="fitback__content">
+        <form class="fitback__form">
+          <div class="fitback__row fitback__row-select">
+            <label class="fitback__label">
+              <span class="fitback__label-text">Как часто вы заходите на сайт?</span>
+                <select class="fitback__select">
+                  <option value="every day" selected>Почти каждый день</option>
+                  <option value="few days">Раз в несколько дней</option>
+                  <option value="few weeks">Раз в несколько недель</option>
+                  <option value="few year">Несколько раз в год</option>
+                </select>
+            </label>
+          </div>
+          <div class="fitback__row fitback__row-radio">
+            <span class="fitback__label-text">Вы подписаны на e-mail рассылку?</span>   
+            <div class="fitback__group">
+            <label class="fitback__label-radio">                                       
+              <input type="radio" class="fitback__radio" name="radio-group" checked>
+              <span class="fitback__radio-text">Да</span>
+            </label>
+            <label class="fitback__label-radio"> 
+              <input type="radio" class="fitback__radio" name="radio-group">
+              <span class="fitback__radio-text fitback__radio-text-no">Нет</span>
+            </label>
+            </div>  
+          </div>
+          <div class="fitback__row fitback__row-label">
+            <label class="fitback__label">
+              <span class="fitback__label-text">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+              <textarea placeholder="Может, больше рецептов?" class="fitback__field" required>         
+              </textarea>
+            </label>
+          </div>
+          <div class="fitback__row fitback__row-button">
+            <button class="fitback__button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <button class="popup__close" type="button"></button>
+  </div>
+</div>
 </body>
 </html>

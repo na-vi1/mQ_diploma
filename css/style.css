@@ -1,4 +1,286 @@
-h1 {
-	color: darkgreen;
-	border: 2px solid yellow;
+@font-face {
+	font-family: "OpenSans";
+	src: local("OpenSans"), url("C:\Users\NAVi\Desktop\mq_diploma\fonts\OpenSans-Regular.woff"); 
+	font-style: normal;
+	font-weight: normal;
 }
+
+@font-face {
+	font-family: "OpenSans";
+	src: local("OpenSans"), url("C:\Users\NAVi\Desktop\mq_diploma\fonts\OpenSans-Bold.woff"); 
+	font-style: normal;
+	font-weight: bold;
+}
+
+body {
+  margin: 0;
+}
+
+.popup {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 238px;
+}
+
+.popup::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+} 
+
+.popup__container {
+  position: relative;
+  z-index: 3;
+  min-width: 390px;
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.fitback {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 390px;
+  min-height: 590px;
+  box-sizing: border-box;
+  padding: 51px 0 54px 0;
+  font-family: OpenSans, sans-serif;
+  background-color: #fff;
+}
+
+.fitback__title {
+  display: block;
+  margin: 0;
+  font-family: OpenSans, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.fitback__title::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 5px auto 0;
+  border-bottom: 3px solid #b59f5b;
+}
+
+.fitback__content {
+  padding: 0;
+  font-family: OpenSans, sans-serif;
+  font-size: 13px;
+  color: #000;
+  border: none;
+}
+
+.fitback__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  flex-direction: column;
+  width: 330px;
+}
+
+.fitback__row-select {
+  margin-top: 27px;
+}
+
+.fitback__row-radio {
+  margin-top: 34px;
+}
+
+.fitback__row-label {
+  margin-top: 32px;
+}
+
+.fitback__row-button {
+  margin-top: 26px;
+}
+
+.fitback__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  content: '';
+  display: flex;
+  width: 330px;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding-left: 19px;
+  font-family: OpenSans;
+  font-size: inherit;
+  color: #707171;
+  background-color: #f4f7f6;
+  border: none;
+  border-radius: 0;
+  background-image: url("C:/Users/NAVi/Desktop/mq-diploma-master/sources/svg/form-arrows.svg");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 10px;
+}
+
+.fitback__select:hover {
+  color: #000;
+  border-bottom: 1px solid #b59f5b;
+}  
+.fitback__select:focus-visible {
+  color: #707171;
+  background-color: rgba (0.01, 0.01, 0.01, 0);
+  border: 1px solid #b59f5b;
+  outline: none;
+}
+    
+.fitback__radio {
+  display: none;
+}
+
+.fitback__radio-text::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-image: url("C:/Users/NAVi/Desktop/mq-diploma-master/sources/svg/form-empty-circle.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 18px;
+}
+
+.fitback__radio-text-no {
+  margin-left: 13px;
+}
+
+.fitback__radio:checked + .fitback__radio-text::before {
+  background-image: url("C:/Users/NAVi/Desktop/mq_diploma/svg/form-circle.svg");
+}
+
+.fitback__label-text {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  margin-bottom: 8px;
+  font-size: inherit;
+}
+
+.fitback__field {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  max-width: 330px;
+  width: 100%;
+  min-height: 130px;
+  max-height: 130px;
+  box-sizing: border-box;
+  padding: 24px 0 0 19px;
+  font-family: OpenSans, sans-serif;
+  font-size: 14px;
+  color: #707171;
+  background-color: #f4f7f6;
+  border: none;
+}
+
+.fitback__field:focus {
+  border-bottom: 1px solid #ebe7d7;
+  border-right: 1px solid #ebe7d7;
+}
+
+.fitback__field:focus-visible {
+  border: 1px solid #b59f5b;
+  outline: none;
+}
+
+.fitback__button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  max-width: 330px;
+  height: 48px;
+  box-sizing: border-box;
+  font-family: OpenSans, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #b59f5b;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.fitback__button:hover {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-top: 1px solid #b9b29b;
+  border-radius: 0;
+}
+
+.fitback__button:focus-visible {
+  background-color: #323232;
+  outline: none;
+}
+
+.popup__close {
+  content: '';
+  position: absolute;
+  top: -26px;
+  right: -0.6px;  
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  background-image: url("C:/Users/NAVi/Desktop/mq-diploma-master/sources/svg/form-x.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 640px){
+  .popup {
+    padding: 0;
+  }
+  .popup__container {
+    width: 100%;
+    height: 100vh;
+  }
+  .fitback {
+    min-width: 330px;
+    max-height: 546px;
+  }
+  .fitback__content {
+    width: 85%;
+    height: 85vh;
+  }
+  .fitback__select, .fitback__field, .fitback__button {
+    width: 80%;
+    min-width: 282px;
+  }
+}
+
+@media (min-width: 641px and max-width: 1200px) {
+ 
+} 
+
+@media (min-width: 1201px) {
+  
+}
+  
